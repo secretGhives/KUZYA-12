@@ -170,12 +170,18 @@ html, body { overflow: hidden; }
 	text-align: center;
 	font-size: 60px;
 	line-height: 1;
+	z-index: 1;
 }
 #art-digital b { display: block; font-size: 250px; line-height: 250px; }
 
 #art-digital #digitals {
 max-height: 600px;
 overflow: auto;
+}
+
+#art-digital strong {
+margin-bottom: 13px;
+display: block;
 }
 
 
@@ -186,10 +192,16 @@ overflow: auto;
 #art-study {
 	width: 24em;
 	text-align: center;
+	z-index: 2;
 }
 #art-study #studies {
 max-height: 600px;
 overflow: auto;
+}
+#art-study strong {
+font-size: 32px;
+display: block;
+text-decoration: line-through;
 }
 
 
