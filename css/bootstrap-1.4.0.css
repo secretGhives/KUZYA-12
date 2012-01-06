@@ -2397,3 +2397,10 @@ input[type=submit].btn::-moz-focus-inner {
   margin-right: 3px;
   text-decoration: none;
   cursor: pointer; }
+
+.icon-btn:hover {
+  text-decoration: none; }
+
+.icon-btn.big {
+  font-size: 22px;
+  line-height: 32px; }

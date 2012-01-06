@@ -70,3 +70,5 @@
 		url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
 	}
 .icon-btn { font-family: 'WebSymbolsRegular'; padding: 3px; margin-right: 3px; text-decoration: none; cursor: pointer; @extend .unselectable;}
+.icon-btn:hover { text-decoration: none; }
+.icon-btn.big { font-size: 22px; line-height: 32px; }

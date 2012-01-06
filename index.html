@@ -61,10 +61,66 @@
 /* MEDIA QUERIES 
 ================================================== */
 @media screen and (max-width: 800px) {
-	body { background: blue !important; }
+	body { background: #eee !important; }
+	#site-logo {
+	top: 3px !important;
+	left: 6px !important;
+	font-size: 24px;
+	}
+	#site-nav {
+	right: 6px !important;
+	top: 3px !important;
+	}
+	#site-nav a {
+	padding: 2px 5px !important;
+	}
+	.slide {
+	max-width: 780px;
+	height: 311px;
+	padding: 20px 32px;
+	font-size: 16px;
+	line-height: 18px;
+	}
+	.slide q {
+	font-size: 28px;
+	line-height: 30px;
+	margin-top: 0;
+	}
+	.step {
+	max-width: 780px;
+	padding: 10px;
+	}
+	#bored q {
+	margin-top: 69px;
+	padding: 42px;
+	}
+	#container {
+	margin: 9px auto 0 auto;
+	}
+	#art-digital #digitals, #art-study #studies {
+	max-height: 300px;
+	}
+	#art-digital strong,
+	#art-study strong,
+	#latest-tweets strong {
+	margin-bottom: 6px;
+	font-size: 28px;
+	}
+	#tweets, .tweet, .query {
+	font-size: 13px;
+	}
+	.tweet_list li {
+	padding: 1px;
+	}
+	#title {
+	width: auto;
+	}
+	.hint {
+	bottom: 69px;
+	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 801px, max-width: 1024px) {
 	#site-logo {
 	top: 12px !important;
 	left: 12px !important;
@@ -100,23 +156,8 @@
 }
 
 @media screen and (min-width: 1200px) { 
-	body { 
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
-	background-size: 100% 1.2em;
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
-	background-size: 100% 1.2em;
-	}
+	body { background: #f3f3f3 !important; }
 }
-	.bg-paper {
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
-	background-size: 100% 1.2em;
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), -webkit-linear-gradient(#eee .05em, transparent .05em);
-	background-size: 100% 1.2em;
-	}
 	#console {
 	position: fixed;
 	height: 200px;
@@ -176,20 +217,20 @@
 
 </head>
 
-<body class="bg-pape">
+<body class="pretty">
 
-	<h1 id="site-logo" class="pretty">KUZYA<span class="icon-btn">?</span>COM</h1>
+	<h1 id="site-logo" class="pretty" onclick="window.location='/'">KUZYA<span class="icon-btn">?</span>COM</h1>
 
 	<nav id="site-nav">
 		<ul class="horizontal">
-			<li><a href="#bored" title="First slide">Home</a></li>
+			<!-- <li><a href="#bored" title="First slide">Home</a></li> -->
 			<li><a href="#step-2" title="Play a game">Ducks</a></li>
-			<li><a href="#title" title="First slide">Spacer</a></li>
+			<!-- <li><a href="#title" title="First slide">Spacer</a></li> -->
 			<li><a href="#art-digital" title="Digital Artwork">Digital</a></li>
 			<li><a href="#art-study" title="Art study">Studies</a></li>
 			<li><a href="#latest-tweets" title="Random crap">Tweets</a></li>
 			<li><a href="#contacts" title="Send me a message">Contacts</a></li>
-			<li><a href="#overview" title="View all sections">All</a></li>
+			<!-- <li><a href="#overview" title="View all sections">All</a></li> -->
 		</ul><!-- /site-nav -->
 	</nav>
 
@@ -219,27 +260,34 @@
 			<span class="footnote">OK, next..</span>
 		</div>
 
-		<div id="art-digital" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6" data-z="-200">
+		<div id="art-digital" class="step" data-x="2280" data-y="2250" data-rotate="180" data-scale="6" data-z="-200">
 			<strong>Digital</strong>
 			<div id="digitals"></div>
 		</div>
 
-		<div id="art-study" class="step" data-x="625" data-y="2625" data-z="-600" data-rotate="300" data-scale="1">
-			<p>my <strong>Studies</strong></p>
+		<div id="art-study" class="step" data-x="-1756" data-y="2490" data-z="-600" data-rotate="270" data-scale="3">
+			<strong>Studies</strong>
 			<div id="studies"></div>
 		</div>
 
 		<div id="latest-tweets" class="step" data-x="6700" data-y="-500" data-scale="6">
-			<h1>latest from the grapewine..</h1>
+			<strong>grapewine..</strong>
 			<div id="tweets"></div>
 		</div>
 
-		<div id="contacts" class="step" data-x="6000" data-y="4000" data-rotate="20" data-scale="2">
+		<div id="contacts" class="step" data-x="6240" data-y="2380" data-rotate="20" data-scale="2">
 			<fieldset>
 				<legend>Tell me a story, something to read</legend>
 				<textarea class="xxlarge" name="textarea" id="contact-textarea" rows="9"></textarea>
 				<input id="contact-send" type="submit" class="btn primary" value="Send"/>
 			</fieldset>
+			<div id="social" class="ac">
+				<a href="#" id="link-fb" class="icon-btn big">f</a>
+				<a href="#" id="link-gp" class="icon-btn big">g</a>
+				<a href="#" id="link-li" class="icon-btn big">l</a>
+				<a href="#" id="link-yt" class="icon-btn big">y</a>
+				<a href="#" id="link-tw" class="icon-btn big">t</a>
+			</div>
 		</div>
 
 		<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
