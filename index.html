@@ -212,6 +212,12 @@
 	display: block;
 	}
 
+	#current-video {
+	display: block;
+	margin: 0 auto;
+	width: 400px;
+	}
+
 
 	</style>
 
@@ -242,7 +248,10 @@
 		</div>
 
 		<div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-			<q>OMMG, This is my personal homepage, I like to draw and do creative stuff.</q>
+			<video id="current-video" controls>
+			<source src="video/love.ogv" type='video/ogg; codecs="theora, vorbis"' />
+			</video>
+			<q>OMMG, I do creative stuff.</q>
 		</div>
 
 		<div class="step slide" data-x="1000" data-y="-1500">
@@ -282,11 +291,10 @@
 				<input id="contact-send" type="submit" class="btn primary" value="Send"/>
 			</fieldset>
 			<div id="social" class="ac">
-				<a href="#" id="link-fb" class="icon-btn big">f</a>
-				<a href="#" id="link-gp" class="icon-btn big">g</a>
-				<a href="#" id="link-li" class="icon-btn big">l</a>
-				<a href="#" id="link-yt" class="icon-btn big">y</a>
-				<a href="#" id="link-tw" class="icon-btn big">t</a>
+				<a href="http://www.facebook.com/secretGspot" id="link-fb" class="icon-btn big" target="_new">f</a>
+				<a href="https://plus.google.com/102625264670986641064/posts" id="link-gp" class="icon-btn big" target="_new">g</a>
+				<a href="http://twitter.com/secretgspot" id="link-tw" class="icon-btn big" target="_new">t</a>
+				<a href="http://www.youtube.com/user/turboslut" id="link-yt" class="icon-btn big" target="_new">y</a>
 			</div>
 		</div>
 

@@ -47,7 +47,7 @@ html, body { overflow: hidden; }
 .slide q {
 	display: block;
 	font-size: 50px;
-	line-height: 72px;
+	line-height: normal;
 	margin-top: 100px;
 }
 .slide q strong { white-space: nowrap; }
