@@ -15,10 +15,10 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<!-- Temp Style REMOVE -->
-	<link rel="stylesheet" href="css/impress.css">
 	<link rel="stylesheet" href="css/duckhunt.css">
 	<link rel="stylesheet" href="css/slimbox2.css">
 	<link rel="stylesheet" href="css/tweets.css">
+	<link rel="stylesheet" href="css/impress.css">
 
 	<script src="js/libs/modernizr.min.js"></script>
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
@@ -26,13 +26,13 @@
 	<script src="js/libs/underscore.min.js"></script>
 	<script src="js/libs/backbone.js"></script>
 	<script src="js/libs/namespace.js"></script>
+	<!--<script src="js/libs/require.js"></script>-->
 	<!--[if (gte IE 6)&(lte IE 8)]>
 		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
 	<![endif]-->
 	
-	<!-- BOOTSTRAP COMPONENTS -->
+	<!-- BOOTSTRAP COMPONENTS 
 	<script defer src="js/partials/bootstrap-alerts.js"></script>
-	<script defer src="js/partials/bootstrap-buttons.js"></script>
 	<script defer src="js/partials/bootstrap-dropdown.js"></script>
 	<script defer src="js/partials/bootstrap-modal.js"></script>
 	<script defer src="js/partials/bootstrap-twipsy.js"></script>
@@ -41,8 +41,9 @@
 	<script defer src="js/partials/bootstrap-scrollspy.js"></script>
 	<script defer src="js/partials/bootstrap-tablesorter.js"></script>
 	<script defer src="js/partials/bootstrap-tabs.js"></script>
-	<script defer src="js/partials/bootstrap-tour.js"></script>
+	<script defer src="js/partials/bootstrap-tour.js"></script> -->
 	<script defer src="js/partials/bootstrap-mail.js"></script>
+	<script defer src="js/partials/bootstrap-buttons.js"></script>
 
 	<!-- CUSTOM SCRIPTS (INIT) -->
 	<script defer src="js/script.js"></script>
@@ -57,192 +58,11 @@
 		<button id="search_button" class="btn primary">Search</button>
 	</script>
 
-	<style>
-/* MEDIA QUERIES 
-================================================== */
-@media screen and (max-width: 800px) {
-	body { background: #eee !important; }
-	#site-logo {
-	top: 3px !important;
-	left: 6px !important;
-	font-size: 24px;
-	}
-	#site-nav {
-	right: 6px !important;
-	top: 3px !important;
-	}
-	#site-nav a {
-	padding: 2px 5px !important;
-	}
-	.slide {
-	max-width: 780px;
-	height: 311px;
-	padding: 20px 32px;
-	font-size: 16px;
-	line-height: 18px;
-	}
-	.slide q {
-	font-size: 28px;
-	line-height: 30px;
-	margin-top: 0;
-	}
-	.step {
-	max-width: 780px;
-	padding: 10px;
-	}
-	#bored q {
-	margin-top: 69px;
-	padding: 42px;
-	}
-	#container {
-	margin: 9px auto 0 auto;
-	}
-	#art-digital #digitals, #art-study #studies {
-	max-height: 300px;
-	}
-	#art-digital strong,
-	#art-study strong,
-	#latest-tweets strong {
-	margin-bottom: 6px;
-	font-size: 28px;
-	}
-	#tweets, .tweet, .query {
-	font-size: 13px;
-	}
-	.tweet_list li {
-	padding: 1px;
-	}
-	#title {
-	width: auto;
-	}
-	.hint {
-	bottom: 69px;
-	}
-}
-
-@media screen and (min-width: 801px, max-width: 1024px) {
-	#site-logo {
-	top: 12px !important;
-	left: 12px !important;
-	}
-	#site-nav {
-	right: 12px !important;
-	top: 12px !important;
-	}
-	#site-nav a {
-	padding: 3px 6px;
-	}
-	.slide {
-	width: 800px;
-	height: 369px;
-	padding: 13px 32px;
-	font-size: 16px;
-	line-height: 18px;
-	}
-	.slide q {
-	font-size: 28px;
-	line-height: 30px;
-	margin-top: 42px;
-	}
-	#container {
-	margin: 22px auto 0 auto;
-	}
-	#art-digital #digitals, #art-study #studies {
-	max-height: 400px;
-	}
-	#art-study {
-	width: 20em;
-	}
-}
-
-@media screen and (min-width: 1200px) { 
-	body { background: #f3f3f3 !important; }
-}
-	#console {
-	position: fixed;
-	height: 200px;
-	top: -200px;
-	left: 0;
-	right: 0;
-	bottom: auto;
-	background: rgba(0,0,0,0.96);
-	z-index: 1000;
-	}
-	#console_output { 
-	position: absolute;
-	left: 3px;
-	right: 3px;
-	bottom: 3px;
-	top: 28px;
-	padding: 3px;
-	background: rgba(0,0,0,0.3);
-	color: #39c;
-	outline: 0;
-	border: 0;
-	resize:none;
-	overflow: auto;
-	}
-
-	#site-logo {
-	display: inline-block;
-	position: absolute;
-	top: 32px;
-	left: 32px;
-	z-index: 999;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
-	}
-	#site-logo:hover span {
-		color: #39f;
-	}
-
-	#site-nav {
-	position: absolute;
-	right: 32px;
-	top: 32px;
-	z-index: 999;
-	}
-	#site-nav li {
-	display: inline-block;
-	border: 1px solid lavender;
-	}
-	#site-nav a {
-	padding: 6px 9px;
-	display: block;
-	}
-
-	#video {
-	width: auto;
-	z-index: 3;
-	}
-	#current-video {
-	display: block;
-	margin: 0 auto;
-	width: 400px;
-	}
-
-
-	</style>
-
 </head>
 
 <body class="pretty">
 
 	<h1 id="site-logo" class="pretty" onclick="window.location='/'">KUZYA<span class="icon-btn">?</span>COM</h1>
-
-	<nav id="site-nav">
-		<ul class="horizontal">
-			<!-- <li><a href="#bored" title="First slide">Home</a></li> -->
-			<li><a href="#step-2" title="Play a game">Ducks</a></li>
-			<!-- <li><a href="#title" title="First slide">Spacer</a></li> -->
-			<li><a href="#art-digital" title="Digital Artwork">Digital</a></li>
-			<li><a href="#art-study" title="Art study">Studies</a></li>
-			<li><a href="#latest-tweets" title="Random crap">Tweets</a></li>
-			<li><a href="#contacts" title="Send me a message">Contacts</a></li>
-			<!-- <li><a href="#overview" title="View all sections">All</a></li> -->
-		</ul><!-- /site-nav -->
-	</nav>
 
 	<div id="impress" class="impress-not-supported">
 
@@ -251,12 +71,23 @@
 			<p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 and Internet Explorer 10 <i>should</i> also handle it.</p>
 		</div>
 
-		<div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-			<q>OMMG, I do creative stuff</q>
+		<div id="bored" class="step slide" data-x="-1170" data-y="-1260">
+			<!-- <q>OMMG, I do creative stuff</q> -->
+			<div class="tumblr post g-four-fifths"></div>
+			<div class="g-fifth">
+				<div id="social" class="ac">
+					<a href="http://www.facebook.com/secretGspot" id="link-fb" class="icon-btn big" target="_new">f</a>
+					<a href="https://plus.google.com/102625264670986641064/posts" id="link-gp" class="icon-btn big" target="_new">g</a>
+					<a href="http://twitter.com/secretgspot" id="link-tw" class="icon-btn big" target="_new">t</a>
+					<a href="http://www.youtube.com/user/turboslut" id="link-yt" class="icon-btn big" target="_new">y</a>
+				</div>
+				<br/>
+				<button class="btn primary" id="visit-blog">Visit Blog</button>
+			</div>
 		</div>
 
-		<div class="step slide" data-x="1000" data-y="-1500">
-			<q>Wanna <strong>waste</strong> some time?</q>
+		<div class="step slide" data-x="710" data-y="-1260">
+			<!-- <q>Wanna <strong>waste</strong> some time?</q> -->
 			<!-- DuckHunt Placeholder -->
 			<div id="container" class="fadeOnLoad">
 				<div id="mask">
@@ -265,44 +96,38 @@
 			</div>
 		</div>
 
-		<div id="video" class="step" data-x="3200" data-y="-700" data-scale="6">
+		<div id="title" class="step" data-x="0" data-y="0" data-scale="6">
+			<h1>Я, Кузя!</h1>
+			<span class="footnote">I like creative stuff..</span>
+		</div>
+
+		<div id="video" class="step" data-x="3030" data-y="-550" data-scale="6">
 			<video id="current-video" controls>
 			<source src="video/love.ogv" type='video/ogg; codecs="theora, vorbis"' />
 			</video>
 		</div>
 
-		<div id="title" class="step" data-x="0" data-y="0" data-scale="6">
-			<h1>Naaah?</h1>
-			<span class="footnote">OK, next..</span>
-		</div>
+<!-- 		<div id="video0" class="step tumblr video" data-x="3200" data-y="-700" data-scale="6">
+		</div> -->
 
-		<div id="art-digital" class="step" data-x="2280" data-y="2250" data-rotate="180" data-scale="6" data-z="-200">
+		<div id="art-digital" class="step" data-x="2400" data-y="2890" data-rotate="180" data-scale="6" data-z="-200">
 			<strong>Digital</strong>
 			<div id="digitals"></div>
 		</div>
 
-		<div id="art-study" class="step" data-x="-1756" data-y="2490" data-z="-600" data-rotate="270" data-scale="3">
+		<div id="art-study" class="step" data-x="-1636" data-y="2660" data-z="-600" data-rotate="270" data-scale="3">
 			<strong>Studies</strong>
 			<div id="studies"></div>
 		</div>
 
-		<div id="latest-tweets" class="step" data-x="6700" data-y="-500" data-scale="6">
-			<strong>grapewine..</strong>
-			<div id="tweets"></div>
-		</div>
+		<div id="latest-tweets" class="step" data-x="6340" data-y="-710" data-scale="5"></div>
 
-		<div id="contacts" class="step" data-x="6240" data-y="2380" data-rotate="20" data-scale="2">
+		<div id="contacts" class="step" data-x="6660" data-y="2550" data-rotate="69" data-scale="6">
 			<fieldset>
-				<legend>Tell me a story, something to read</legend>
+				<legend>Something to read..</legend>
 				<textarea class="xxlarge" name="textarea" id="contact-textarea" rows="9"></textarea>
 				<input id="contact-send" type="submit" class="btn primary" value="Send"/>
 			</fieldset>
-			<div id="social" class="ac">
-				<a href="http://www.facebook.com/secretGspot" id="link-fb" class="icon-btn big" target="_new">f</a>
-				<a href="https://plus.google.com/102625264670986641064/posts" id="link-gp" class="icon-btn big" target="_new">g</a>
-				<a href="http://twitter.com/secretgspot" id="link-tw" class="icon-btn big" target="_new">t</a>
-				<a href="http://www.youtube.com/user/turboslut" id="link-yt" class="icon-btn big" target="_new">y</a>
-			</div>
 		</div>
 
 		<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
@@ -310,13 +135,24 @@
 	</div>
 
 	<div class="hint">
-		<p>Use a spacebar or arrow keys to navigate</p>
+		<p>Use left/right arrow keys to navigate, or esc for quick menu</p>
 	</div>
 
 
 	<!-- Application colsole log -->
 	<aside id="console">
 		<div id="search_container"></div>
+		<nav id="site-nav">
+			<ul class="horizontal">
+				<!-- <li><a href="#bored" title="First slide">Home</a></li> -->
+				<li><a href="#step-2" class="btn" title="Play a game">Ducks</a></li>
+				<li><a href="#art-digital" class="btn" title="Digital Artwork">Digital</a></li>
+				<li><a href="#art-study" class="btn" title="Art study">Studies</a></li>
+				<li><a href="#latest-tweets" class="btn" title="Random crap">Tweets</a></li>
+				<li><a href="#contacts" class="btn" title="Send me a message">Contacts</a></li>
+				<!-- <li><a href="#overview" class="btn" title="View all sections">All</a></li> -->
+			</ul><!-- /site-nav -->
+		</nav>
 		<div id="console_output"></div>
 	</aside>
 
@@ -324,6 +160,7 @@
 	<script src="js/libs/picasa.js"></script>
 	<script src="js/libs/slimbox2.js"></script>
 	<script src="js/libs/tweet.js"></script>
+	<script src="js/libs/tumblr.js"></script>
 
 </body>
 </html>

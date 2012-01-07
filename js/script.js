@@ -25,21 +25,21 @@ function console_slide(evt){
 ////////////////////////////////////////////////////////////////////////////////
 // CLASS
 ////////////////////////////////////////////////////////////////////////////////
-var myAppName = {
-		settings: {
-				isOnline: true
-		},
+// var myAppName = {
+// 		settings: {
+// 				isOnline: true
+// 		},
 
-		console: {
-			log: function(message) {
-				var element = document.getElementById('console_output');
-				element.innerHTML = element.innerHTML + message + '<br />';
-			}
-		}
-}
-//accessed as
-console.log(myAppName.settings.isOnline); // true
-myAppName.console.log('myApp says Hello');
+// 		console: {
+// 			log: function(message) {
+// 				var element = document.getElementById('console_output');
+// 				element.innerHTML = element.innerHTML + message + '<br />';
+// 			}
+// 		}
+// }
+// //accessed as
+// console.log(myAppName.settings.isOnline); // true
+// myAppName.console.log('myApp says Hello');
 
 
 
@@ -78,28 +78,28 @@ Namespace('com.myProject', {
 // USING BACKBONE.JS
 ////////////////////////////////////////////////////////////////////////////////
 
-	SearchView = Backbone.View.extend({
-		initialize: function(){
-			this.render();
-		},
-		render: function(){
-			//Pass variables in using Underscore.js Template
-			var variables = { search_label: "My Search" };
-			// Compile the template using underscore
-			var template = _.template( $("#search_template").html(), variables );
-			// Load the compiled HTML into the Backbone "el"
-			this.el.html( template );
-		},
-		events: {
-			"click button": "doSearch"  
-		},
-		doSearch: function( event ){
-			// Button clicked, you can access the element that was clicked with event.currentTarget
-			myAppName.console.log( "Searched for " + $("#search_input").val() );
-		}
-	});
+SearchView = Backbone.View.extend({
+	initialize: function(){
+		this.render();
+	},
+	render: function(){
+		//Pass variables in using Underscore.js Template
+		var variables = { search_label: "My Search" };
+		// Compile the template using underscore
+		var template = _.template( $("#search_template").html(), variables );
+		// Load the compiled HTML into the Backbone "el"
+		this.el.html( template );
+	},
+	events: {
+		"click button": "doSearch"  
+	},
+	doSearch: function( event ){
+		// Button clicked, you can access the element that was clicked with event.currentTarget
+		myAppName.console.log( "Searched for " + $("#search_input").val() );
+	}
+});
 
-	var search_view = new SearchView({ el: $("#search_container") });
+var search_view = new SearchView({ el: $("#search_container") });
 
 
 
@@ -167,19 +167,23 @@ Namespace('com.myProject', {
 
 	// TWEETER
 	////////////////////////
-	jQuery(function($){
-		$("#tweets").tweet({
-			join_text: "auto",
-			username: "secretgspot",
-			avatar_size: 48,
-			count: 6,
-			auto_join_text_default: "we said,",
-			auto_join_text_ed: "we",
-			auto_join_text_ing: "we were",
-			auto_join_text_reply: "we replied",
-			auto_join_text_url: "we were checking out",
-			loading_text: "loading tweets..."
-		});
+	$("#latest-tweets").tweet({
+		join_text: "auto",
+		username: "secretgspot",
+		avatar_size: 48,
+		count: 6,
+		auto_join_text_default: "we said,",
+		auto_join_text_ed: "we",
+		auto_join_text_ing: "we were",
+		auto_join_text_reply: "we replied",
+		auto_join_text_url: "we were checking out",
+		loading_text: "loading tweets..."
 	});
+
+	// TUMBLR
+	/////////////////////
+	$(".tumblr.post").tumblrRss({username: "secretgspot", tagged: "post", limit: 1});
+	$(".tumblr.video").tumblrRss({username: "secretgspot", tagged: "video", limit: 1});
+
 
 })(jQuery);
