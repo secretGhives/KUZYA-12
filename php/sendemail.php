@@ -34,10 +34,10 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 // CHANGE THE URL BELOW TO YOUR "THANK YOU" PAGE
 if ($success){
   //print "<meta http-equiv="refresh" content="0;URL=thanks.html">";
-  alert("sent");
+  console.log("sent");
 }
 else{
   //print "<meta http-equiv="refresh" content="0;URL=error.html">";
-  alert("something failed");
+  console.log("something failed");
 }
 ?>
