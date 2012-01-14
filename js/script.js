@@ -25,51 +25,22 @@ function console_slide(evt){
 ////////////////////////////////////////////////////////////////////////////////
 // CLASS
 ////////////////////////////////////////////////////////////////////////////////
-// var myAppName = {
-// 		settings: {
-// 				isOnline: true
-// 		},
+var myAppName = {
+		settings: {
+				isOnline: true
+		},
 
-// 		console: {
-// 			log: function(message) {
-// 				var element = document.getElementById('console_output');
-// 				element.innerHTML = element.innerHTML + message + '<br />';
-// 			}
-// 		}
-// }
-// //accessed as
-// console.log(myAppName.settings.isOnline); // true
-// myAppName.console.log('myApp says Hello');
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-// USING NAMESPACE.JS
-////////////////////////////////////////////////////////////////////////////////
-
-// creates an empty namespace
-Namespace('com.myProject');
-
-// creates or use a namespace and fill it with the specified properties
-Namespace('com.myProject', {
-
-	Settings: {
-		isOnline: true
-	},
-
-	Console: {
-		log: function(message) {
-			var element = document.getElementById('console_output');
-			element.innerHTML = element.innerHTML + message + '<br />';
+		console: {
+			log: function(message) {
+				var element = document.getElementById('console_output');
+				element.innerHTML = element.innerHTML + message + '<br />';
+			}
 		}
-	},
+}
+//accessed as
+//console.log(myAppName.settings.isOnline); // true
+myAppName.console.log('myApp says Hello');
 
-	Alert: function(message) {
-		alert(message);
-	}
-	
-});
 
 
 
@@ -103,48 +74,82 @@ var search_view = new SearchView({ el: $("#search_container") });
 
 
 
+//Twitter module
+// // A container for a tweet object.
+// 	var Tweet = Backbone.Model.extend({});
+
+// 	// A basic view rendering a single tweet
+// 	var TweetView = Backbone.View.extend({
+// 	    tagName: "li",
+// 	    className: "tweet",
+
+// 	    render: function() {
+
+// 	        // just render the tweet text as the content of this element.
+// 	        $(this.el).html(this.model.get("text"));
+// 	        return this;
+// 	    }
+// 	});
+
+// 	// A collection holding many tweet objects.
+// 	// also responsible for performing the
+// 	// search that fetches them.
+// 	var Tweets = Backbone.Collection.extend({
+// 	    model: Tweet,
+// 	    initialize: function(models, options) {
+// 	        this.query = options.query;
+// 	    },
+// 	    url: function() {
+// 	        return "http://search.twitter.com/search.json?q=" + this.query + "&callback=?";
+// 	    },
+// 	    parse: function(data) {
+
+// 	        // note that the original result contains tweets inside of a results array, not at 
+// 	        // the root of the response.
+// 	        return data.results;
+// 	    }
+// 	});
+
+// 	// A rendering of a collection of tweets.
+// 	var TweetsView = Backbone.View.extend({
+// 	    tagName: "ul",
+// 	    className: "tweets",
+// 	    render: function() {
+
+// 	        // for each tweet, create a view and prepend it to the list.
+// 	        this.collection.each(function(tweet) {
+// 	            var tweetView = new TweetView({
+// 	                model: tweet
+// 	            });
+// 	            $(this.el).prepend(tweetView.render().el);
+// 	        }, this);
+
+// 	        return this;
+// 	    }
+// 	});
+
+// 	// Create a new cat tweet collection
+// 	var catTweets = new Tweets([], {
+// 	    query: "secretgspot"
+// 	});
+
+// 	// create a view that will contain our tweets
+// 	var catTweetsView = new TweetsView({
+// 	    collection: catTweets
+// 	});
+
+// 	// on a successful fetch, update the collection.
+// 	catTweets.fetch({
+// 	    success: function(collection) {
+// 	        $('#tweet').html(catTweetsView.render().el);
+// 	    }
+// 	});
+
 ////////////////////////////////////////////////////////////////////////////////
 // ON DOM READY
 ////////////////////////////////////////////////////////////////////////////////
 
 (function ($) {
-
-	//Console log a property of settings
-	console.log(com.myProject.Settings.isOnline);
-
-	// calls Console using the fully qualified name (fqn)
-	com.myProject.Console.log(', hello world');
-	//com.myProject.Alert("Hello");
-
-	// imports all properties from com.sandbox into the global space
-	Namespace.use('com.myProject.*');
-	Console.log('unpacked hello world');
-	Console.log('online check: ' + Settings.isOnline);
-
-	// imports all properties from com.myProject.classes after including the file js/classes.js
-	// the use() identifier can also be relative to the identifier used in from() by starting 
-	// with a dot (would be .* in this case)
-	Namespace.from('js.classes.sample').use('com.myProject.classes.*', function() {
-		//new MyClass1();
-		//new MyClass2();
-		//new MyClass3('hello, i was looped through a class and back here');
-	});
-
-	// auto includes com/sandbox/MyNameIsClass.js file and imports MyNameIsClass into the global space
-	// unpack() will use include(). will be async as we use a callback
-	Namespace.use('js.classes.sample', function() {
-		new MyClass2('OMG');
-	});
-
-	// register a listener for the includeError event
-	Namespace.addEventListener('includeError', function(event) {
-		Console.log('an error occured loading ' + event.identifier);
-	});
-	
-
-
-
-
 
 
 	// PICASA

@@ -1,7 +1,7 @@
 	#container {
 		width: 600px;
 		height: 238px;
-		margin: 100px auto 0 auto;
+		margin: 13px auto;
 		position: relative;
 		background: url(../img/overlay.png) 0 0 no-repeat;
 		overflow: hidden;
