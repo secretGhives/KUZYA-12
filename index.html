@@ -1,163 +1,117 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
 	<title>KUZYA.COM</title>
 	<meta name="description" content="Personal homepage of Alekse Kuzenkov aka KUZYA">
 	<meta name="author" content="KUZYA">
 
-	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/su.css">
 
-	<!-- Temp Style REMOVE -->
-	<link rel="stylesheet" href="css/duckhunt.css">
-	<link rel="stylesheet" href="css/slimbox2.css">
-	<link rel="stylesheet" href="css/tweets.css">
-	<link rel="stylesheet" href="css/impress.css">
-
-	<script src="js/libs/modernizr.min.js"></script>
 	<script src="js/libs/jquery.min.js"></script>
 	<script src="js/libs/underscore.min.js"></script>
 	<script src="js/libs/backbone.js"></script>
-	<!--<script src="js/libs/require.js"></script>-->
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
-	<![endif]-->
 	
-	<!-- BOOTSTRAP COMPONENTS 
-	<script defer src="js/partials/bootstrap-alerts.js"></script>
-	<script defer src="js/partials/bootstrap-dropdown.js"></script>
-	<script defer src="js/partials/bootstrap-modal.js"></script>
-	<script defer src="js/partials/bootstrap-twipsy.js"></script>
-	<script defer src="js/partials/bootstrap-popover.js"></script>
-	<script defer src="js/partials/bootstrap-roundabout.js"></script>
-	<script defer src="js/partials/bootstrap-scrollspy.js"></script>
-	<script defer src="js/partials/bootstrap-tablesorter.js"></script>
-	<script defer src="js/partials/bootstrap-tabs.js"></script>
-	<script defer src="js/partials/bootstrap-tour.js"></script> -->
-	<script defer src="js/partials/bootstrap-mail.js"></script>
-	<script defer src="js/partials/bootstrap-buttons.js"></script>
-
 	<!-- CUSTOM SCRIPTS (INIT) -->
+	<script defer src="js/libs/mail.js"></script>
 	<script defer src="js/script.js"></script>
-
-	<!-- DUCKHUNT (Temp, REMOVE) -->
-	<script defer src="js/classes/duckhunt.js"></script>
-
-	<!-- BACKBONE TEMPLATES -->
-	<script type="text/template" id="search_template">
-		<label id="search_label">Label </label>
-		<input type="text" id="search_input" placeholder="type here.." />
-		<button id="search_button" class="btn primary">Search</button>
-	</script>
-
 </head>
 
-<body class="pretty">
+<body class="impress-not-supported">
 
-	<h1 id="site-logo" class="pretty" onclick="window.location='/'">KUZYA<span class="icon-btn">?</span>COM</h1>
+	<div class="fallback-message">
+	  <p>Your browser <b>doesn't support the features required!</b></p>
+	  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+	</div>
 
-	<div id="impress" class="impress-not-supported">
+	<div id="impress">
 
-		<div class="fallback-message">
-			<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-			<p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 and Internet Explorer 10 <i>should</i> also handle it.</p>
-		</div>
-
-		<div id="bored" class="step slide" data-x="-1170" data-y="-1260">
+		<div id="bored" class="step slide" data-x="-2630" data-y="187">
 			<!-- <q>OMMG, I do creative stuff</q> -->
-			<div class="tumblr post g-four-fifths"></div>
-			<div class="g-fifth">
-				<div id="social" class="ac">
-					<a href="http://www.facebook.com/secretGspot" id="link-fb" class="icon-btn big" target="_new">f</a>
-					<a href="https://plus.google.com/102625264670986641064/posts" id="link-gp" class="icon-btn big" target="_new">g</a>
-					<a href="http://twitter.com/secretgspot" id="link-tw" class="icon-btn big" target="_new">t</a>
-					<a href="http://www.youtube.com/user/turboslut" id="link-yt" class="icon-btn big" target="_new">y</a>
+
+			<div class="row-fluid">
+
+				<!-- Latest Tumblr post -->
+				<div class="span6">
+					<h2>Latest Tumblr
+						<span>
+							<a href="//facebook.com/secretGspot" id="link-fb" target="_new">f</a>
+							<a href="//plus.google.com/102625264670986641064/posts" id="link-gp" target="_new">g</a>
+							<a href="//twitter.com/secretgspot" id="link-tw" target="_new">t</a>
+							<a href="//youtube.com/user/turboslut" id="link-yt" target="_new">y</a>
+						</span>
+					</h2>
+					<article id="tumblr-post" class="tumblr post"></article>
 				</div>
-				<br/>
-				<button class="btn primary" id="visit-blog">Visit Blog</button>
+
+				<!-- Twitter posts -->
+				<div class="span6">
+					<h2>Lastest Tweets</h2>
+					<article id="latest-tweets"></article>
+				</div>
+
 			</div>
 		</div>
 
-		<div class="step slide" data-x="710" data-y="-1260">
-			<!-- <q>Wanna <strong>waste</strong> some time?</q> -->
-			<!-- DuckHunt Placeholder -->
-			<div id="container" class="fadeOnLoad">
-				<div id="mask">
-					<div id="wave"></div>
-				</div>
-			</div>
-		</div>
-
-		<div id="title" class="step" data-x="0" data-y="0" data-scale="6">
+		<div id="title" class="step" data-x="0" data-y="0" data-scale="4">
 			<h1>Я, Кузя!</h1>
 			<span class="footnote">I like creative stuff..</span>
 		</div>
 
-		<div id="video" class="step" data-x="3030" data-y="-550" data-scale="6">
-			<video id="current-video" controls>
-			<source src="video/love.ogv" type='video/ogg; codecs="theora, vorbis"' />
-			</video>
-		</div>
-
-<!-- 		<div id="video0" class="step tumblr video" data-x="3200" data-y="-700" data-scale="6">
-		</div> -->
-
-		<div id="art-digital" class="step" data-x="2400" data-y="2890" data-rotate="180" data-scale="6" data-z="-200">
+		<div id="art-digital" class="step" data-x="1660" data-y="2240" data-rotate="180" data-scale="6" data-z="-200">
 			<strong>Digital</strong>
 			<div id="digitals"></div>
 		</div>
 
-		<div id="art-study" class="step" data-x="-1636" data-y="2660" data-z="-600" data-rotate="270" data-scale="3">
+		<div id="art-study" class="step" data-x="-2196" data-y="2190" data-z="-600" data-rotate="270" data-scale="3">
 			<strong>Studies</strong>
 			<div id="studies"></div>
 		</div>
 
-		<div id="latest-tweets" class="step" data-x="6340" data-y="-710" data-scale="5"></div>
-
-		<div id="contacts" class="step" data-x="6660" data-y="2550" data-rotate="69" data-scale="6">
+		<div id="contacts" class="step" data-x="3940" data-y="220" data-rotate="90" data-scale="4">
 			<form method="post" action="php/sendemail.php" id="contactForm">
 				<fieldset>
 					<legend>Something to read..</legend>
-					<textarea class="xxlarge" name="site-comment" id="contact-textarea" rows="9"></textarea>
-					<input id="contact-send" type="submit" class="btn primary" value="Send"/>
+					<textarea name="site-comment" id="contact-textarea" rows="9"></textarea>
+					<input id="contact-send" type="submit" class="btn btn-primary btn-large" value="Send"/>
 				</fieldset>
+			</form>
 		</div>
 
-		<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
-
+	    <!--
+	        
+	        So to make a summary of all the possible attributes used to position presentation steps, we have:
+	        
+	        * `data-x`, `data-y`, `data-z` -- they define the position of **the center** of step element on
+	            the canvas in pixels; their default value is 0;
+	        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` -- they define the rotation of
+	            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+	            are exactly the same;
+	        * `data-scale` -- defines the scale of step element; default value is 1
+	        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
+	    -->
+	    
 	</div>
 
 	<div class="hint">
-		<p>Use left/right arrow keys to navigate, or esc for quick menu</p>
+	  <p>Use a spacebar or arrow keys to navigate</p>
 	</div>
 
-
-	<!-- Application colsole log -->
-	<aside id="console">
-		<div id="search_container"></div>
-		<nav id="site-nav">
-			<ul class="horizontal">
-				<!-- <li><a href="#bored" title="First slide">Home</a></li> -->
-				<li><a href="#step-2" class="btn" title="Play a game">Ducks</a></li>
-				<li><a href="#art-digital" class="btn" title="Digital Artwork">Digital</a></li>
-				<li><a href="#art-study" class="btn" title="Art study">Studies</a></li>
-				<li><a href="#latest-tweets" class="btn" title="Random crap">Tweets</a></li>
-				<li><a href="#contacts" class="btn" title="Send me a message">Contacts</a></li>
-				<!-- <li><a href="#overview" class="btn" title="View all sections">All</a></li> -->
-			</ul><!-- /site-nav -->
-		</nav>
-		<div id="console_output"></div>
-	</aside>
+	<script>
+	if ("ontouchstart" in document.documentElement) { 
+	document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+	}
+	</script>
 
 	<script src="js/libs/impress.js"></script>
+	<script>var niceUi = impress();</script>
 	<script src="js/libs/picasa.js"></script>
-	<script src="js/libs/slimbox2.js"></script>
+	<script src="js/libs/slimbox.js"></script>
 	<script src="js/libs/tweet.js"></script>
 	<script src="js/libs/tumblr.js"></script>
 
