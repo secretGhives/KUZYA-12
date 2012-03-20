@@ -58,7 +58,7 @@ transform:         translateY(400px);
 transition:         opacity 1s,         transform 0.5s 1s;
 }
 
-.impress-on-bored .hint {
+.impress-on-title .hint {
 opacity: 1;
 
 -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;

@@ -41,7 +41,7 @@
 	// TUMBLR
 	/////////////////////
 	$(".tumblr.post").tumblrRss({username: "secretgspot", tagged: "post", limit: 1});
-	$(".tumblr.video").tumblrRss({username: "secretgspot", tagged: "video", limit: 1});
+	//$(".tumblr.video").tumblrRss({username: "secretgspot", tagged: "video", limit: 1});
 
 
 })(jQuery);

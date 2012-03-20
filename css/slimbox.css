@@ -31,7 +31,7 @@ margin: 0; padding: 0;
 }
 
 .lbLoading {
-background: #fff url(../img/page/loading.gif) no-repeat center;
+background: #fff url(../img/loading.gif) no-repeat center;
 }
 
 #lbImage {

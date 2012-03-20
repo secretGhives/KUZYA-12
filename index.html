@@ -14,11 +14,12 @@
 	<link rel="stylesheet" href="css/su.css">
 
 	<script src="js/libs/jquery.min.js"></script>
+	<!-- DISABLED 
 	<script src="js/libs/underscore.min.js"></script>
 	<script src="js/libs/backbone.js"></script>
+	-->
 	
 	<!-- CUSTOM SCRIPTS (INIT) -->
-	<script defer src="js/libs/mail.js"></script>
 	<script defer src="js/script.js"></script>
 </head>
 
@@ -31,7 +32,22 @@
 
 	<div id="impress">
 
-		<div id="bored" class="step slide" data-x="-2630" data-y="187">
+		<div id="title" class="step" data-x="0" data-y="0" data-z="0" data-scale="3">
+			<h1>Я, KUZYA!</h1>
+			<span class="footnote">I like shiny stuff..</span>
+		</div>
+
+		<div id="art-digital" class="step" data-x="3000" data-y="1111" data-z="-3000" data-rotate="90" data-scale="4">
+			<strong>Digital</strong>
+			<div id="digitals"></div>
+		</div>
+
+		<div id="art-study" class="step" data-x="-2196" data-y="2190" data-z="-6000" data-rotate="180" data-scale="3">
+			<strong>Studies</strong>
+			<div id="studies"></div>
+		</div>
+
+		<div id="bored" class="step slide" data-x="-2630" data-y="187" data-z="-9000" data-rotate="90">
 			<!-- <q>OMMG, I do creative stuff</q> -->
 
 			<div class="row-fluid">
@@ -56,31 +72,6 @@
 				</div>
 
 			</div>
-		</div>
-
-		<div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-			<h1>Я, Кузя!</h1>
-			<span class="footnote">I like creative stuff..</span>
-		</div>
-
-		<div id="art-digital" class="step" data-x="1660" data-y="2240" data-rotate="180" data-scale="6" data-z="-200">
-			<strong>Digital</strong>
-			<div id="digitals"></div>
-		</div>
-
-		<div id="art-study" class="step" data-x="-2196" data-y="2190" data-z="-600" data-rotate="270" data-scale="3">
-			<strong>Studies</strong>
-			<div id="studies"></div>
-		</div>
-
-		<div id="contacts" class="step" data-x="3940" data-y="220" data-rotate="90" data-scale="4">
-			<form method="post" action="php/sendemail.php" id="contactForm">
-				<fieldset>
-					<legend>Something to read..</legend>
-					<textarea name="site-comment" id="contact-textarea" rows="9"></textarea>
-					<input id="contact-send" type="submit" class="btn btn-primary btn-large" value="Send"/>
-				</fieldset>
-			</form>
 		</div>
 
 	    <!--
