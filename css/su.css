@@ -63,8 +63,16 @@ transform:         translateZ(50px);
 
 #title .footnote { font-size: 32px; }
 
-
-
+#ascii {
+font-family: monospace;
+font-size: 5px;
+line-height: 0.5;
+letter-spacing: 0em;
+background: transparent;
+position: absolute;
+top: -99px;
+left: -38px;
+}
 /*////////////////////////////////////////////
 // ART DIGITAL SECTION
 */
@@ -113,3 +121,5 @@ cursor: pointer;
 /*////////////////////////////////////////////
 // LARGE OVERVIEW SECTION
 */
+
+
