@@ -51,8 +51,6 @@ $(document).ready(function() {
 
 $(window).load(function() {
 
-	// SHADOW
-	//////////////////////
-	//$(".shadow").realshadow();
+
 
 });
