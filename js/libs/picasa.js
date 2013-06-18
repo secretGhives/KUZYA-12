@@ -79,6 +79,7 @@
             msg_more : 'more',
             album_title_tag: '<h2/>',
             auto_open: false,
+            thumb_class: 'shadow',
             thumb_id_prefix: 'pThumb_',
             thumb_tuner: null,
             thumb_finalizer: null,
@@ -315,6 +316,7 @@
 
                $div
                    .attr("id", meta_opts.thumb_id_prefix + item.gphoto$id.$t )
+                   .attr("class", meta_opts.thumb_class )
                    .append($a);
 
 

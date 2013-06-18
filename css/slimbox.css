@@ -9,15 +9,17 @@ width: 100%; height: 100%;
 background-color: #fff;
 cursor: pointer;
 margin: 0; padding: 0;
+pointer-events: none;
 }
 
-#lbCenter { z-index: 9999; }
+#lbCenter { z-index: 9999; pointer-events: all; }
 #lbBottomContainer {
 background: #fff;
 bottom: auto; top: 3px;
 left: auto; right: 3px;
 position: absolute;
 z-index: 9999;
+pointer-events: all;
 }
 #lbCenter,
 #lbImage,
