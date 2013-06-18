@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,18 +11,13 @@
 	<meta name="description" content="Personal homepage of Alekse Kuzenkov aka KUZYA">
 	<meta name="author" content="KUZYA">
 
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/su.css">
-
 	<script src="js/libs/jquery.min.js"></script>
-	<script src="js/libs/prefix.min.js"></script>
-	<!-- DISABLED 
-	<script src="js/libs/underscore.min.js"></script>
-	<script src="js/libs/backbone.js"></script>
-	-->
-	
-	<!-- CUSTOM SCRIPTS (INIT) -->
-	<script defer src="js/script.js"></script>
+	<script src="js/libs/prefix.js"></script>
+	<script src="js/libs/picasa.js"></script>
+	<script src="js/libs/slimbox.js"></script>
+	<!--<script src="js/libs/tweet.js"></script>-->
 </head>
 
 <body class="impress-not-supported">
@@ -32,63 +28,29 @@
 	</div>
 
 	<div id="impress">
-
-<!-- 		<div id="title" class="step" data-x="0" data-y="0" data-z="0" data-scale="3">
-			<pre id="ascii"></pre>​
-			<h1>Я, &nbsp;&nbsp;&nbsp;KUZYA!</h1>
+		<div id="title" class="step" data-x="0" data-y="32" data-z="0" data-scale="1">
+			<h1>Я, KUZYA!</h1>
 			<span class="footnote">I like shiny stuff..</span>
-		</div> -->
+			<!--<div id="latest-tweets"></div>-->
+			<div id="social-links">
+				<a href="/resume/">Resume</a> &bull; <a href="//www.linkedin.com/profile/view?id=227964927">linkedIn</a> &bull; <a href="//github.com/secretgspot">gitHub</a>
+			</div>
+		</div>
 
-		<div id="art-digital" class="step" data-x="3000" data-y="1111" data-z="-3000" data-rotate="90" data-scale="4">
+		<div id="art-digital" class="step" data-x="-300" data-y="0" data-z="-333" data-scale="1" data-rotate-y="-42">
 			<strong>Digital</strong>
 			<div id="digitals"></div>
 		</div>
 
-		<div id="art-study" class="step" data-x="-2196" data-y="2190" data-z="-6000" data-rotate="180" data-scale="3">
+		<div id="art-study" class="step" data-x="300" data-y="0" data-z="-333" data-scale="1" data-rotate-y="42">
 			<strong>Studies</strong>
 			<div id="studies"></div>
 		</div>
 
-		<!--<div id="bored" class="step slide" data-x="-2630" data-y="187" data-z="-9000" data-rotate="90">
-			<!-- <q>OMMG, I do creative stuff</q> -->
-
-			<div class="row-fluid">
-
-				<!-- Latest Tumblr post -->
-				<div class="span6">
-					<h2>Latest Tumblr
-						<span>
-							<a href="//facebook.com/secretGspot" id="link-fb" target="_new">f</a>
-							<a href="//plus.google.com/102625264670986641064/posts" id="link-gp" target="_new">g</a>
-							<a href="//twitter.com/secretgspot" id="link-tw" target="_new">t</a>
-							<a href="//youtube.com/user/turboslut" id="link-yt" target="_new">y</a>
-						</span>
-					</h2>
-					<article id="tumblr-post" class="tumblr post"></article>
-				</div>
-
-				<!-- Twitter posts -->
-				<div class="span6">
-					<h2>Lastest Tweets</h2>
-					<article id="latest-tweets"></article>
-				</div>
-
-			</div>
-		</div> -->
-
-	    <!--
-	        
-	        So to make a summary of all the possible attributes used to position presentation steps, we have:
-	        
-	        * `data-x`, `data-y`, `data-z` -- they define the position of **the center** of step element on
-	            the canvas in pixels; their default value is 0;
-	        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` -- they define the rotation of
-	            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-	            are exactly the same;
-	        * `data-scale` -- defines the scale of step element; default value is 1
-	        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
-	    -->
-	    
+		<div id="art-traditional" class="step" data-x="0" data-y="0" data-z="-666" data-scale="1" data-rotate-y="168">
+			<strong>Traditional</strong>
+			<div id="traditional"></div>
+		</div>
 	</div>
 
 	<div class="hint">
@@ -96,36 +58,38 @@
 	</div>
 
 	<script>
-	if ("ontouchstart" in document.documentElement) { 
+	if ("ontouchstart" in document.documentElement) {
 	document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 	}
 	</script>
 
+
 	<script src="js/libs/impress.js"></script>
-	<script>var niceUi = impress().init();</script>
-	<script src="js/libs/picasa.js"></script>
-	<script src="js/libs/slimbox.js"></script>
-	<!--<script src="js/libs/tweet.js"></script>
-	<script src="js/libs/tumblr.js"></script>
-	<script src="js/libs/ascii.js"></script>-->
+	<script>impress().init();</script>
 
-<script type="text/javascript">
+	<!--<script src="js/libs/clouds.js"></script>-->
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
-  _gaq.push(['_setDomainName', 'kuzya.com']);
-  _gaq.push(['_trackPageview']);
+	<!-- CUSTOM SCRIPTS (INIT) -->
+	<script src="js/script.js"></script>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-27285047-1']);
+	_gaq.push(['_setDomainName', 'kuzya.com']);
+	_gaq.push(['_trackPageview', '/title']);
+	_gaq.push(['_trackPageview', '/art-digital']);
+	_gaq.push(['_trackPageview', '/art-study']);
 
-</script>
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
 
 </body>
 </html>
+
 <!--// &#9734;  ☆
                              -~-%%%-,,
                            ,%       ^2%

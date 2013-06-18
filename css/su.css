@@ -30,7 +30,7 @@ transition: all 2s ease-in-out;
 }
 #title .footnote { font-size: 32px;}
 
-#latest-tweets { pointer-events: all; 
+#latest-tweets { pointer-events: all;
 background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
 background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -62,3 +62,7 @@ margin-top: 13px;
 #art-study { }
 #art-study #studies { max-height: 640px; overflow: auto; }
 #art-study strong { display: block; text-decoration: line-through; }
+
+#art-traditional { }
+#art-traditional #traditional { max-height: 640px; overflow: auto; }
+#art-traditional strong { display: block; text-align: left; padding-left: 13px; }
